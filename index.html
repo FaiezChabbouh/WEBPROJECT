@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index_style.css">
+    <title>Document</title>
+</head>
+
+<body class="fad-in">
+    <header>
+        <div class="title">
+           Faiez Chabbouh<div class="circle"></div>
+        </div>
+        <nav class="navbar">
+            <div class="navbar-items" id="index-page">
+                <ul>
+                    <li><a class="home active" href="index.html">Home</a></li>
+                    <li><a href="html/resume.html">Resume</a></li>
+                    <li><a href="html/services.html">Services</a></li>
+                    <li><a href="html/contact.html">Contact</a></li>
+                    <li><a href="html/quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="btn-hire-me">
+                <button id="hire-me-btn">Hire me</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text-section">
+            <h4 class="status">Software Developer</h4>
+            <h1>
+                Hello I'm <div class="typing"></div>
+            </h1>
+            <p class="desc">
+                I specialise in designing refined digital experiences,
+                with a strong proficiency across a range of programming languages and technologies.
+                My expertise enables me to deliver high-quality,
+                intuitive solutions that meet both aesthetic and functional requirements in
+                diverse technological environments.
+            </p>
+
+            <div class="buttons">
+                <ul>
+                    <a href="images/faiez.JPG" download="My_CV.pdf" class="download-btn" onclick="return confirmDownload()">DOWNLOAD CV <i 
+                        class="bi-download"></i>
+                    </a>
+                </ul>
+            </div>
+        </section>
+
+        <section class="image-section">
+            <div class="image">
+                <img src="images/faiez.JPG" alt="Image">
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Hire Me -->
+    <div id="hire-me-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-btn" class="close-btn">&times;</span>
+            <h2>Hire Me</h2>
+            <form id="hire-me-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="work-needed">Work Needed</label>
+                <textarea id="work-needed" name="work-needed" rows="4" required></textarea><br>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Include the external JS file -->
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>

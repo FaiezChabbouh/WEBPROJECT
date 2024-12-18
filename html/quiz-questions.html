@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+    <link rel="stylesheet" href="../css/quiz_style.css">
+    <link rel="stylesheet" href="../css/index_style.css">
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            Faiez Chabbouh<div class="circle"></div>
+        </div>
+        <nav class="navbar">
+            <div class="navbar-items" id="index-page">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="quiz active" href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="quiz-container-wrapper">
+            <!-- Quiz Container -->
+            <div id="quiz-container">
+                <div id="question-container">
+                    <h2 id="question">Question will appear here</h2>
+                    <div id="options"></div>
+                    <button id="next-button" disabled>Next</button>
+                </div>
+            </div>
+
+            <!-- Score Container -->
+            <div id="score-container" class="hidden">
+                <h2>Your Score: <span id="score"></span></h2>
+                <div id="score-bar">
+                    <div id="score-fill"></div>
+                </div>
+                <h3 id="result"></h3>
+                <button id="restart-button">Restart</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                options: ["Berlin", "Madrid", "Paris", "Lisbon"],
+                correctAnswers: [2] // Only Paris is correct
+            },
+            {
+                question: "Which of these are programming languages?",
+                options: ["Python", "Snake", "JavaScript", "Java", "HTML"],
+                correctAnswers: [0, 2, 3] // Python, JavaScript, Java are correct
+            },
+            {
+                question: "Who developed the theory of relativity?",
+                options: ["Newton", "Einstein", "Tesla", "Curie"],
+                correctAnswers: [1] // Only Einstein is correct
+            },
+            {
+                question: "Which of the following are continents?",
+                options: ["Africa", "Asia", "Australia", "Paris", "Atlantic"],
+                correctAnswers: [0, 1, 2] // Africa, Asia, and Australia are correct
+            },
+            {
+                question: "Which of these are prime numbers?",
+                options: ["2", "4", "6", "11", "15"],
+                correctAnswers: [0, 3] // 2 and 11 are prime
+            },
+            {
+                question: "Which of the following are fruits?",
+                options: ["Apple", "Carrot", "Banana", "Potato"],
+                correctAnswers: [0, 2] // Apple and Banana are fruits
+            },
+            {
+                question: "Which are valid HTML tags?",
+                options: ["<div>", "<header>", "<footer>", "<main>", "<container>"],
+                correctAnswers: [0, 1, 2, 3] // All except <container>
+            },
+            {
+                question: "Which countries are in Europe?",
+                options: ["Germany", "USA", "Italy", "Canada"],
+                correctAnswers: [0, 2] // Germany and Italy
+            },
+            {
+                question: "Which of these are planets in the solar system?",
+                options: ["Earth", "Mars", "Pluto", "Sun"],
+                correctAnswers: [0, 1, 2] // Earth, Mars, and Pluto
+            },
+            {
+                question: "Which of these are programming languages?",
+                options: ["Java", "Ruby", "React", "Angular", "Python"],
+                correctAnswers: [0, 1, 4] // Java, Ruby, Python
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let selectedAnswers = [];
+
+        const questionContainer = document.getElementById('question');
+        const optionsContainer = document.getElementById('options');
+        const nextButton = document.getElementById('next-button');
+        const scoreContainer = document.getElementById('score-container');
+        const scoreSpan = document.getElementById('score');
+        const restartButton = document.getElementById('restart-button');
+        const scoreBar = document.getElementById('score-fill');
+        const resultText = document.getElementById('result');
+
+        nextButton.addEventListener('click', nextQuestion);
+        restartButton.addEventListener('click', restartQuiz);
+
+        displayQuestion();
+
+        function displayQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            questionContainer.textContent = currentQuestion.question;
+
+            optionsContainer.innerHTML = '';
+            currentQuestion.options.forEach((option, index) => {
+                const optionButton = document.createElement('button');
+                optionButton.textContent = option;
+                optionButton.classList.add('option-button');
+                optionButton.addEventListener('click', () => toggleAnswer(index));
+                optionsContainer.appendChild(optionButton);
+            });
+
+            nextButton.disabled = true;
+        }
+
+        function toggleAnswer(index) {
+            const currentQuestion = questions[currentQuestionIndex];
+            const optionButtons = document.querySelectorAll('.option-button');
+            const isSelected = selectedAnswers.includes(index);
+
+            if (isSelected) {
+                selectedAnswers = selectedAnswers.filter(i => i !== index);
+                optionButtons[index].classList.remove('selected');
+            } else {
+                selectedAnswers.push(index);
+                optionButtons[index].classList.add('selected');
+            }
+
+            if (selectedAnswers.length > 0) {
+                nextButton.disabled = false;
+            }
+        }
+
+        function nextQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            const correctAnswers = currentQuestion.correctAnswers;
+
+            const isCorrect = selectedAnswers.every(answer => correctAnswers.includes(answer)) &&
+                selectedAnswers.length === correctAnswers.length;
+
+            if (isCorrect) {
+                score++;
+            }
+
+            updateScoreBar();
+
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questions.length) {
+                displayQuestion();
+                selectedAnswers = [];
+            } else {
+                endQuiz();
+            }
+        }
+
+        function updateScoreBar() {
+            const percentage = (score / questions.length) * 100;
+            scoreBar.style.width = percentage + '%';
+        }
+
+        function endQuiz() {
+            questionContainer.textContent = "Quiz Over!";
+            optionsContainer.innerHTML = '';
+            nextButton.style.display = "none"; // Hide the Next button after quiz is over
+
+            scoreContainer.classList.remove('hidden');
+            scoreSpan.textContent = score;
+
+            if (score > 7) {
+                resultText.textContent = "You Passed!";
+            } else {
+                resultText.textContent = "You Failed!";
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            selectedAnswers = [];
+            scoreContainer.classList.add('hidden');
+            nextButton.style.display = "inline-block"; // Show the Next button again when restarting
+            displayQuestion();
+        }
+    </script>
+</body>
+
+</html>

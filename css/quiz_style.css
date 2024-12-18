@@ -1,0 +1,171 @@
+/* Center the quiz container and layout */
+#quiz-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 50px; /* Space between the quiz and score container */
+    padding: 20px;
+    width: 100%;
+}
+
+/* Quiz container */
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%; /* Adjust width to fit next to score container */
+    text-align: center;
+}
+
+/* Question container styling */
+#question-container {
+    width: 100%; /* Make it span the available space */
+    padding: 40px;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.6rem;
+}
+
+/* Score container styling */
+#score-container {
+    width: 30%; /* Place it next to the quiz container */
+    padding: 40px;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/* Score bar styling */
+#score-bar {
+    width: 100%;
+    background-color: #333;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+    position: relative;
+}
+
+#score-fill {
+    background-color: cyan;
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Option button styling */
+.option-button {
+    display: block; /* Stack options vertically */
+    background-color: #282828;
+    color: #e0e0e0;
+    padding: 20px; /* Larger padding for better readability */
+    margin: 15px auto; /* Add spacing between options */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 90%; /* Takes up more horizontal space */
+    max-width: 800px; /* Prevents excessively wide buttons */
+    text-align: center; /* Center align the text inside the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.5; /* Ensures the text is vertically centered */
+}
+
+/* Hover effect for options */
+.option-button:hover {
+    background-color: cyan;
+    color: #1c1c1c;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Selected option state */
+.option-button.selected {
+    background-color: pistachio;
+    color: #1c1c1c;
+    transform: scale(1.05); /* Slight zoom effect when selected */
+}
+
+/* Correct answer styling */
+.option-button.correct {
+    background-color: #4caf50; /* Green for correct answer */
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Incorrect answer styling */
+.option-button.incorrect {
+    background-color: #f44336; /* Red for incorrect answer */
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Next and Restart button styling */
+#next-button,
+#restart-button {
+    background-color: cyan;
+    color: black;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    transition: background-color 0.3s;
+}
+
+#next-button:disabled {
+    background-color: #555;
+    color: #888;
+    cursor: not-allowed;
+}
+
+#next-button:hover:enabled,
+#restart-button:hover {
+    background-color: pistachio;
+    color: #1c1c1c;
+}
+
+/* Start Quiz Button Styling */
+#start-quiz-button {
+    background-color: #4caf50; /* Green background for the start button */
+    color: white;
+    font-size: 1.6rem;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Hover effect for the Start Quiz button */
+#start-quiz-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Disabled Start Quiz button */
+#start-quiz-button:disabled {
+    background-color: #aaa;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Focus effect for the Start Quiz button */
+#start-quiz-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px cyan; /* Glow effect when focused */
+}

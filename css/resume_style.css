@@ -1,0 +1,229 @@
+/* Global Styling for Resume */
+body {
+    background-color: #000000; /* Black background for night mode */
+    color: #a5ffd6; /* Pistachio green text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    background-color: #001f33; /* Dark cyan blue */
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: #a5ffd6; /* Pistachio green */
+    font-size: 36px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.title .circle {
+    width: 10px;
+    height: 10px;
+    background-color: #00ffff; /* Cyan blue */
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* Navbar Styling */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #a5ffd6;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #00ffff; /* Cyan blue */
+}
+
+.btn-hire-me button {
+    background-color: #a5ffd6;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-hire-me button:hover {
+    background-color: #00ffff; /* Cyan blue */
+    color: #000000;
+}
+
+/* Resume Section Layout */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Left Side Styling (for Why Hire Me, Buttons, etc.) */
+.left_side {
+    flex: 1;
+    padding: 20px;
+    background-color: #00263b; /* Dark cyan blue for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.left_side h2 {
+    font-size: 32px;
+    color: #00ffff; /* Cyan blue */
+    margin-bottom: 15px;
+}
+
+.left_side .desc {
+    font-size: 18px;
+    color: #a5ffd6; /* Pistachio green */
+    margin-bottom: 20px;
+}
+
+.left_side .buttons ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+.left_side .buttons ul li button {
+    background-color: #001f33; /* Dark cyan blue */
+    color: #a5ffd6;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.left_side .buttons ul li button:hover {
+    background-color: #00ffff; /* Cyan blue */
+}
+
+/* Right Side Styling (Content Sections like Experience, Education, Skills, About Me) */
+.right_side {
+    flex: 2;
+    padding: 20px;
+    background-color: #00263b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content-section {
+    display: none; /* Hidden by default */
+}
+
+.content-section.active {
+    display: block; /* Display active section */
+}
+
+.content-section h2 {
+    color: #00ffff; /* Cyan blue */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content-section .desc {
+    color: #a5ffd6; /* Pistachio green */
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: #001f33; /* Dark cyan blue */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table td {
+    padding: 15px;
+    border: 1px solid #00ffff; /* Cyan blue */
+    vertical-align: top;
+    color: #a5ffd6; /* Pistachio green */
+    font-size: 16px;
+}
+
+table td .col {
+    max-width: 250px;
+}
+
+/* Font Awesome Icons in Skills Section */
+.fab, .fas {
+    color: #a5ffd6; /* Pistachio green */
+    font-size: 40px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.fab:hover, .fas:hover {
+    color: #00ffff; /* Cyan blue */
+}
+
+/* Button Active State Styling */
+button.active {
+    background-color: #00ffff; /* Cyan blue */
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button.active:hover {
+    background-color: #00c8c8; /* Lighter cyan blue */
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left_side, .right_side {
+        flex: 1;
+        padding: 15px;
+    }
+
+    .left_side h2, .right_side h2 {
+        font-size: 28px;
+    }
+
+    .content-section h2 {
+        font-size: 28px;
+    }
+
+    .btn-hire-me button {
+        font-size: 14px;
+    }
+}

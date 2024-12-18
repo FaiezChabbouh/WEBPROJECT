@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated CSS links with correct paths -->
+    <link rel="stylesheet" href="../css/resume_style.css">
+    <link rel="stylesheet" href="../css/index_style.css">
+    
+    <title>Resume</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="title">
+            Faiez Chabbouh<div class="circle"></div>
+        </div>
+        <nav class="navbar">
+            <div class="navbar-items" id="index-page">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                  
+                    <li><a class="resume active" href="resume.html">Resume</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+                <div class="btn-hire-me">
+                    <button>Hire me </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="left_side">
+                <h2 class="sub-title">Why hire me?</h2>
+                <div class="desc">
+                    <p>I am a dedicated professional with a passion for technology and a commitment to delivering high-quality work. My diverse skill set allows me to tackle various challenges effectively.</p>
+                </div>
+                <div class="buttons">
+                    <ul>
+                        <li><button class="active" onclick="showContent('experience', this)">Experience</button></li>
+                        <li><button onclick="showContent('education', this)">Education</button></li>
+                        <li><button onclick="showContent('skills', this)">Skills</button></li>
+                        <li><button onclick="showContent('about_me', this)">About me</button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="right_side">
+                <div id="experience" class="content-section active">
+                    <h2>My experience</h2>
+                    <p class="desc">I have gained valuable experience through internships and projects, where I developed practical skills in software development and project management. I thrive in collaborative environments and enjoy solving complex problems.</p>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="col item-1">
+                                    <h3>Summer 2022</h3>
+                                    <h4>PFA (Projet Fin D'annee)</h4>
+                                    <h4 style="color: darkgray;">InfoSoft, Route Taniour, Km 7, Sfax, 3003</h4>
+                                    <p>I did an internship during the three months of summer as part of my PFA internship, which was required by my institute. During this internship, I attended small training sessions on Docker, Git, and GitHub. I developed a personnel management application using Appsmith.</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col item-2">
+                                    <h3>02-2023 -- 05-2023</h3>
+                                    <h4>PFE (Projet Fin D'etude)</h4>
+                                    <h4 style="color: darkgray;">InfoSoft | Apprt 302, L'Afrane Klm1, Immeuble Belghuith, Route, Sfax 3062</h4>
+                                    <p>I did an internship for foor months as part of my final project, which is required by my institute. During this internship, I developed an application for managing photovoltaic sites using Spring Boot for the backend and Angular for the frontend.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="education" class="content-section">
+                    <h2>My education</h2>
+                    <p class="desc">I hold a Bachelor's degree in Computer Science, where I learned the fundamentals of programming, data structures, and algorithms. My education has equipped me with the knowledge to excel in the tech industry.</p>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="col item-1">
+                                    <h3>Baccalaureate</h3>
+                                    <p><strong>Year:</strong> 2021</p>
+                                    <p><strong>Field of Study:</strong> Computer Science</p>
+                                    <p><strong>Institution:</strong> Lycée El Hencha</p>
+                                    <p><strong>Location:</strong> El Hencha, Sfax, Tunisia</p>
+                                    <p><strong>Result:</strong> Mention Assez Bien</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col item-2">
+                                    <h3>Bachelor's Degree</h3>
+                                    <p><strong>Degree:</strong> Licence in Big Data and Data Analytics</p>
+                                    <p><strong>Institution:</strong> Institut Supérieur d'Informatique et Multimedia</p>
+                                    <p><strong>Location:</strong> Cité El Ons, Sfax, Tunisia</p>
+                                    <p><strong>Duration:</strong> 3 Years</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col item-3" style="height: 250px !important;">
+                                    <h3>Current Studies</h3>
+                                    <p><strong>Program:</strong> Computer Engineering</p>
+                                    <p><strong>Institution:</strong> Institut International de Technologies (IIT)</p>
+                                    <p><strong>Location:</strong> Cité El Ons, Sfax, Tunisia</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="skills" class="content-section">
+                    <h2>My skills</h2>
+                    <p class="desc">I possess a strong foundation in web development, including proficiency in HTML, CSS, and JavaScript. Additionally, I have experience with frameworks like Angular and backend technologies such as Spring Boot.</p>
+                    <table>
+                        <tr>
+                            <td><i class="fab fa-html5" title="HTML5"></i></td>
+                            <td><i class="fab fa-css3-alt" title="CSS3"></i></td>
+                            <td><i class="fab fa-js-square" title="JavaScript"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fab fa-python" title="Python"></i></td>
+                            <td><i class="fab fa-c" title="C"></i></td>
+                            <td><i class="fab fa-java" title="Java"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fab fa-angular" title="Angular"></i></td>
+                            <td><i class="fas fa-leaf" title="SpringBoot"></i></td>
+                            <td><i class="fab fa-laravel" title="Laravel"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="about_me" class="content-section">
+                    <h2>About me</h2>
+                    <p class="desc">I am a lifelong learner who enjoys exploring new technologies and improving my skills. In my free time, I love reading tech blogs, participating in coding challenges, and contributing to open-source projects.</p>
+                    <table>
+                        <tr>
+                            <td><h5>Name : <span> Faiez CHABBOUH</span></h5></td>
+                            <td><h5>Phone : <span>(+216) 99 054 694</span></h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Experience : <span> None</span></h5></td>
+                            <td><h5>Title : <span>Student</span></h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Nationality : <span>Tunisian</span></h5></td>
+                            <td><h5>Email : <span>faiezchabouh@gmail.com</span></h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Freelance : <span>Available</span></h5></td>
+                            <td><h5>Languages : <span>English, French, German</span></h5></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

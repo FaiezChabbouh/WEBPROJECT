@@ -1,0 +1,155 @@
+/* Global Styling */
+body {
+    background-color: #000000; /* Black background for night mode */
+    color: #a5ffd6; /* Pistachio green for text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #001f33; /* Dark cyan blue */
+    padding: 20px;
+}
+
+.title {
+    color: #a5ffd6; /* Pistachio green */
+    font-size: 36px;
+    position: relative;
+}
+
+.title .circle {
+    width: 10px;
+    height: 10px;
+    background-color: #00ffff; /* Cyan blue */
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 120px;
+}
+
+/* Navbar Styling */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #a5ffd6;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #00ffff; /* Cyan blue */
+}
+
+.btn-hire-me button {
+    background-color: #a5ffd6;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hire-me button:hover {
+    background-color: #00ffff; /* Cyan blue */
+    color: #000000;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.left-side,
+.right-side {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.contact-section h1 {
+    color: #00ffff; /* Cyan blue */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    color: #a5ffd6;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    background-color: #001f33; /* Dark cyan blue */
+    color: #a5ffd6;
+}
+
+form button {
+    background-color: #00ffff;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #a5ffd6; /* Pistachio green */
+    color: #000000;
+}
+
+/* Right Side Info Styling */
+.container {
+    background-color: #001f33;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 255, 255, 0.2);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    background-color: #00ffff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 15px;
+}
+
+.icon {
+    color: #000000;
+    font-size: 20px;
+}
+
+.label {
+    color: #a5ffd6;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.value {
+    color: #00ffff;
+    font-size: 16px;
+}

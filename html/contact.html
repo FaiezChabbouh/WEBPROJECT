@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/index_style.css">
+    <link rel="stylesheet" href="../css/contact_style.css">
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            Faiez <div class="circle"></div>
+        </div>
+        <nav class="navbar">
+            <div class="navbar-items" id="index-page">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a class="contact active" href="contact.html">Contact</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+                <div class="btn-hire-me">
+                    <button>Hire me</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="left-side">
+                <div class="box">
+                    <h1>Let's work together</h1>
+                    <p class="desc">Feel free to reach out for collaborations or any inquiries. I’d love to hear from you!</p>
+                    <form id="contact-form">
+                        <div class="input-row">
+                            <input type="text" placeholder="Firstname" required>
+                            <input type="text" placeholder="Lastname" required>
+                        </div>
+                        <div class="input-row">
+                            <input type="email" placeholder="Email address" required>
+                            <input type="tel" placeholder="Phone number" required>
+                        </div>
+                        <div class="input-row">
+                            <select required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="frontend">FrontEnd Developer</option>
+                                <option value="backend">BackEnd Developer</option>
+                                <option value="fullstack">FullStack Developer</option>
+                                <option value="mobile">Mobile Developer</option>
+                            </select>
+                        </div>
+                        <div class="input-row">
+                            <textarea placeholder="Type your message here." required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="container">
+                    <div class="info-item">
+                        <div class="icon-container">
+                            <i class="bi bi-telephone-fill icon"></i>
+                        </div>
+                        <div>
+                            <p class="label">Phone</p>
+                            <p class="value">(+216) 55 554 886</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-container">
+                            <i class="bi bi-envelope-fill icon"></i>
+                        </div>
+                        <div>
+                            <p class="label">Email</p>
+                            <p class="value">faiezchabouh@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-container">
+                            <i class="bi bi-geo-alt-fill icon"></i>
+                        </div>
+                        <div>
+                            <p class="label">Address</p>
+                            <p class="value">Tunis, Sfax, Taniour 3032</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

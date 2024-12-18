@@ -1,0 +1,165 @@
+/* Global Styling */
+body {
+    background-color: #000000; /* Black background for night mode */
+    color: #a5ffd6; /* Pistachio green for text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #001f33; /* Dark cyan blue */
+    padding: 20px;
+}
+
+.title {
+    color: #a5ffd6; /* Pistachio green */
+    font-size: 36px;
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.title .circle {
+    width: 10px;
+    height: 10px;
+    background-color: #00ffff; /* Cyan blue */
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: -20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    margin-top: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #a5ffd6;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    color: #000000; /* Black text */
+    background-color: #00ffff; /* Cyan blue */
+}
+
+.btn-hire-me button {
+    background-color: #a5ffd6;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-hire-me button:hover {
+    background-color: #00ffff; /* Cyan blue */
+    color: #000000;
+    transform: scale(1.05);
+}
+
+/* Main Section Styling */
+main {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Service Card Styling */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card-header svg {
+    fill: #00ffff; /* Cyan blue */
+}
+
+.card-header .svg-text {
+    fill: #00ffff; /* Cyan blue */
+}
+
+.card-subtitle h2 {
+    color: #a5ffd6; /* Pistachio green */
+    font-size: 24px;
+    margin: 0;
+}
+
+.service-card {
+    background-color: #001f33; /* Dark cyan blue */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-card .desc {
+    color: #a5ffd6;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.service-card .desc p {
+    margin: 0;
+}
+
+.service-card .card-subtitle h2 {
+    font-size: 22px;
+    color: #00ffff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
